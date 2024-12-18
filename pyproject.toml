@@ -1,0 +1,31 @@
+[project]
+name = "nonebot-plugin-marshoai-plugin-alclinker"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "ChenXu233", email = "91937041+ChenXu233@users.noreply.github.com"},
+]
+dependencies = ["nonebot2>=2.4.0", "nonebot-plugin-alconna>=0.54.1", "nonebot-plugin-marshoai>=1.0.0.dev2"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+    "nonebot-adapter-onebot>=2.4.6",
+    "nonebot2[fastapi]>=2.4.0",
+]
+test = [
+    "nonebot-plugin-wordcloud>=0.8.0",
+    "nonebot-plugin-orm[default]>=0.7.6",
+]
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff.lint]
+ignore = ["E402"]
